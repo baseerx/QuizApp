@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, ImageBackground,ScrollView} from 'react-native';
 import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import FancyAlerts from '../components/FancyAlert';
@@ -91,13 +91,15 @@ const Paper = ({navigation}) => {
           Q1: {question.length > 0 && question}
         </Text>
       </View>
+      <ScrollView>
       <RenderOptions />
+      </ScrollView>
       <View style={styles.imgContainer}>
-        <Image
+        <ImageBackground
           style={styles.bgImg}
           source={{
             uri: 'https://cdni.iconscout.com/illustration/premium/thumb/boy-giving-online-test-4438985-3726680.png',
-          }}></Image>
+          }}></ImageBackground>
       </View>
       <View>
         <FancyAlerts
